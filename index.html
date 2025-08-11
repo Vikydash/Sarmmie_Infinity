@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarmmie Infinity Decoration</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="logo">Sarmmie Infinity Decoration</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+<!-- Hero Section -->
+<section class="hero-slider">
+    <div class="slides">
+        <div class="slide" style="background-image: url('images/img2.jpg');"></div>
+        <div class="slide" style="background-image: url('images/img3.jpg');"></div>
+        <div class="slide" style="background-image: url('images/img4.jpg');"></div>
+    </div>
+    <div class="hero-text">
+        <h1>Turning Moments into Magical Memories</h1>
+        <p>Elegant event decorations for weddings, parties, and more.</p>
+        <button onclick="location.href='#contact'" class="btn">Book Us Now</button>
+    </div>
+</section>
+
+
+    <!-- About Us -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>At Sarmmie Infinity Decoration, we create stunning event experiences with a touch of elegance and creativity. From weddings to birthdays, we transform your vision into reality with our signature light pink and white themes.</p>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Wedding Decorations</h3>
+                <p>Romantic and elegant settings for your special day.</p>
+            </div>
+            <div class="card">
+                <h3>Birthday Parties</h3>
+                <p>Fun, colorful, and memorable birthday setups.</p>
+            </div>
+            <div class="card">
+                <h3>Corporate Events</h3>
+                <p>Professional and stylish designs for corporate functions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery">
+        <h2>Our Work</h2>
+        <div class="gallery-grid">
+            <img src="images/img1.jpg" alt="Event 1">
+            <img src="images/img2.jpg" alt="Event 2">
+            <img src="images/img3.jpg" alt="Event 3">
+            <img src="images/img4.jpg" alt="Event 4">
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <h2>What Clients Say</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial">
+                <p>"Sarmmie Infinity Decoration made my wedding a dream come true!"</p>
+                <h4>- Jane D.</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Their designs are magical. My birthday was unforgettable!"</p>
+                <h4>- Sarah K.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>📞 08012345678 | 📧 info@sarmmiedecoration.com</p>
+        <a href="https://wa.me/2348012345678" class="btn">WhatsApp Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Sarmmie Infinity Decoration. All rights reserved.</p>
+    </footer>
+
+
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        // Show first slide
+        showSlide(currentSlide);
+    
+        // Change every 4 seconds
+        setInterval(nextSlide, 4000);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,250 @@
+/* Fonts & Base Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header / Navbar */
+header {
+    background: rgb(255, 84, 112);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid #fadadd;
+}
+
+.logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 28px;
+    color:whitesmoke ;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #780c1c;
+}
+
+/* Hero Section with fade-in effect */
+
+/* Pink overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(211, 86, 105, 0.5); */
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    padding: 27px;
+    border-radius: 10px;
+    opacity: 0;                /* Start invisible */
+    transform: translateY(20px); /* Slightly lower at start */
+    animation: fadeUp 1.2s ease-in-out forwards;
+    animation-delay: 0.5s;     /* Text appears after bg fades */
+}
+
+/* Fade-in keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade-up keyframes */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn {
+    background: #b76e79; /* Rose gold */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn:hover {
+    background: #a45b65; /* Darker rose gold */
+    transform: scale(1.05);
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.2);
+}
+
+/* Hero Slider container */
+.hero-slider {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+/* Slide wrapper */
+.slides {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Individual slide */
+.slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Pink overlay */
+.hero-slider::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 182, 193, 0.4);
+    z-index: 1;
+}
+
+/* Hero text styling */
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+}
+
+/* Button styles */
+.btn {
+    background: #b76e79;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn:hover {
+    background: #a45b65;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.2);
+}
+
+/* First slide visible at start */
+.slide.active {
+    opacity: 1;
+}
+
+
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(255, 84, 112);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Services */
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: rgb(255, 84, 112);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Testimonials */
+.testimonial-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonial {
+    background: white;
+    border: 2px solid #fadadd;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+/* Contact */
+.contact {
+    background: rgb(255, 84, 112);
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background: white;
+    padding: 10px;
+    font-size: 14px;
+    border-top: 2px solid #fadadd;
+}
