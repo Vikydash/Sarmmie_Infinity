@@ -15,7 +15,7 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
-    border-bottom: 2px solid #fadadd;
+    /* border-bottom: 2px solid #fadadd; */
 }
 
 .logo {
@@ -38,6 +38,36 @@ nav a {
 
 nav a:hover {
     color: #780c1c;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0); /* Line starts with zero width */
+    height: 2px;
+    bottom: -5px; /* Position it below the text */
+    left: 0;
+    background-color: white; /* The underline color */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out; /* Smooth transition */
+}
+
+nav a:hover::after {
+    transform: scaleX(1); /* Expands to full width on hover */
+    transform-origin: bottom left;
+}
+
+/* Social icons styles */
+.social-icons a {
+    color: whitesmoke;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #780c1c; /* Hover color */
 }
 
 /* Hero Section with fade-in effect */
@@ -124,8 +154,9 @@ nav a:hover {
     background-size: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    /* New: Enhance image quality */
+    filter: brightness(0.9) contrast(1.1);
 }
-
 /* Pink overlay */
 .hero-slider::before {
     content: "";
@@ -193,19 +224,21 @@ h2 {
 }
 
 /* Services */
-.service-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.card {
-    background: rgb(255, 84, 112);
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-}
+.service-cards {display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+             justify-content: center;   
+             }
+    
+    
+    
+    .card {background: rgb(255, 84, 112);
+           padding: 20px;
+           border-radius: 10px;
+           width: 250px;
+          } 
+    
+    
 
 /* Gallery */
 .gallery-grid {
